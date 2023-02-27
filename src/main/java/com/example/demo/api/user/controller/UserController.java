@@ -2,7 +2,6 @@ package com.example.demo.api.user.controller;
 
 import com.example.demo.api.user.dto.UserSignupReq;
 import com.example.demo.api.user.dto.UserSignupRes;
-import com.example.demo.api.user.service.TempService;
 import com.example.demo.api.user.service.UserService;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +17,6 @@ import lombok.RequiredArgsConstructor;
 public class UserController {
 
   private final UserService userService;
-  private final TempService tempService;
 
   @PostMapping("/signup")
   public UserSignupRes signup(@RequestBody UserSignupReq userSignupReq) {
